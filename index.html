@@ -1166,6 +1166,177 @@
             box-shadow: 0 2px 8px rgba(34, 197, 94, 0.1);
         }
 
+        /* Stage 3 Scaling Options */
+        .fork-intro {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 32px;
+            border: 1px solid rgba(34, 197, 94, 0.2);
+        }
+
+        .fork-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .fork-icon svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+        }
+
+        .fork-text {
+            flex: 1;
+        }
+
+        .fork-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+        }
+
+        .fork-desc {
+            font-size: 14px;
+            color: #525252;
+            line-height: 1.6;
+        }
+
+        .scaling-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+
+        .scaling-card {
+            background: #f9fafb;
+            border-radius: 16px;
+            padding: 24px;
+            border: 2px solid #e5e7eb;
+            position: relative;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .scaling-card:hover {
+            border-color: #22c55e;
+            box-shadow: 0 8px 32px rgba(34, 197, 94, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .scaling-number {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+        }
+
+        .scaling-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .scaling-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: #22c55e;
+        }
+
+        .scaling-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .scaling-desc {
+            font-size: 14px;
+            color: #525252;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .scaling-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .scaling-tag {
+            font-size: 11px;
+            font-weight: 600;
+            color: #16a34a;
+            background: rgba(34, 197, 94, 0.1);
+            padding: 4px 10px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .choice-note {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-radius: 12px;
+            padding: 20px;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .choice-note-icon {
+            width: 32px;
+            height: 32px;
+            background: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .choice-note-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: #f59e0b;
+        }
+
+        .choice-note-text {
+            font-size: 14px;
+            color: #92400e;
+            line-height: 1.6;
+        }
+
+        .choice-note-text strong {
+            color: #78350f;
+        }
+
         /* Result Section */
         .result-section {
             background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
@@ -1980,6 +2151,140 @@
             </div>
         </section>
 
+        <!-- STAGE 3 -->
+        <section class="stage-tools-section" id="stage3">
+            <div class="stage-tools-header">
+                <div class="stage-tools-badge">
+                    <svg viewBox="0 0 24 24"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/></svg>
+                    Етап 3
+                </div>
+                <h2 class="stage-tools-title">Масштабування</h2>
+                <p class="stage-tools-subtitle">Оберіть свій шлях росту — 5 стратегій на вибір</p>
+            </div>
+
+            <!-- Mini Route for Stage 3 -->
+            <div class="mini-route">
+                <div class="mini-route-title">Ви тут на маршруті</div>
+                <svg class="mini-route-svg" viewBox="0 0 600 100" preserveAspectRatio="xMidYMid meet">
+                    <defs>
+                        <linearGradient id="miniGreen3" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#22c55e"/>
+                            <stop offset="100%" style="stop-color:#16a34a"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Line -->
+                    <path d="M50,70 L150,55 L270,40 L390,25 L550,15" fill="none" stroke="#e5e7eb" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M50,70 L150,55 L270,40 L390,25" fill="none" stroke="url(#miniGreen3)" stroke-width="4" stroke-linecap="round"/>
+                    
+                    <!-- Points -->
+                    <circle cx="50" cy="70" r="6" fill="#22c55e"/>
+                    <circle cx="150" cy="55" r="6" fill="#22c55e"/>
+                    <circle cx="270" cy="40" r="6" fill="#22c55e"/>
+                    <circle cx="390" cy="25" r="12" fill="#22c55e" stroke="white" stroke-width="3"/>
+                    <circle cx="550" cy="15" r="6" fill="#d1d5db"/>
+                    
+                    <!-- Labels -->
+                    <text x="50" y="90" font-size="10" fill="#22c55e" text-anchor="middle">Старт</text>
+                    <text x="150" y="90" font-size="10" fill="#22c55e" text-anchor="middle">Етап 1</text>
+                    <text x="270" y="90" font-size="10" fill="#22c55e" text-anchor="middle">Етап 2</text>
+                    <text x="390" y="90" font-size="11" fill="#22c55e" text-anchor="middle" font-weight="700">ЕТАП 3</text>
+                    <text x="550" y="90" font-size="10" fill="#9ca3af" text-anchor="middle">Автопілот</text>
+                    
+                    <!-- Connector line down -->
+                    <path d="M390,37 L390,100" stroke="#22c55e" stroke-width="2" stroke-dasharray="4,4"/>
+                </svg>
+            </div>
+
+            <!-- Fork Intro -->
+            <div class="fork-intro">
+                <div class="fork-icon">
+                    <svg viewBox="0 0 24 24"><path d="M14 4l2.29 2.29-2.88 2.88 1.42 1.42 2.88-2.88L20 10V4h-6zm-4 0H4v6l2.29-2.29 4.71 4.7V20h2v-8.41l-5.29-5.3L10 4z"/></svg>
+                </div>
+                <div class="fork-text">
+                    <div class="fork-title">Час обрати напрямок росту</div>
+                    <div class="fork-desc">Бізнес працює без вас. Тепер є 5 шляхів масштабування — оберіть той, що відповідає вашим цілям та ресурсам.</div>
+                </div>
+            </div>
+
+            <!-- 5 Scaling Options -->
+            <div class="scaling-options">
+                <div class="scaling-card" data-option="1">
+                    <div class="scaling-number">1</div>
+                    <div class="scaling-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+                    </div>
+                    <h4 class="scaling-title">Управлінська компанія</h4>
+                    <p class="scaling-desc">Створити окрему структуру, яка керує кількома бізнесами або підрозділами як холдинг</p>
+                    <div class="scaling-tags">
+                        <span class="scaling-tag">Холдинг</span>
+                        <span class="scaling-tag">Мультибізнес</span>
+                    </div>
+                </div>
+
+                <div class="scaling-card" data-option="2">
+                    <div class="scaling-number">2</div>
+                    <div class="scaling-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                    </div>
+                    <h4 class="scaling-title">Франшиза</h4>
+                    <p class="scaling-desc">Упакувати бізнес-модель і продавати право на використання бренду та системи іншим підприємцям</p>
+                    <div class="scaling-tags">
+                        <span class="scaling-tag">Масштаб</span>
+                        <span class="scaling-tag">Роялті</span>
+                    </div>
+                </div>
+
+                <div class="scaling-card" data-option="3">
+                    <div class="scaling-number">3</div>
+                    <div class="scaling-icon">
+                        <svg viewBox="0 0 24 24"><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg>
+                    </div>
+                    <h4 class="scaling-title">ІТ-платформа управління</h4>
+                    <p class="scaling-desc">Перетворити внутрішні інструменти на SaaS-продукт і продавати доступ іншим бізнесам</p>
+                    <div class="scaling-tags">
+                        <span class="scaling-tag">SaaS</span>
+                        <span class="scaling-tag">Підписка</span>
+                    </div>
+                </div>
+
+                <div class="scaling-card" data-option="4">
+                    <div class="scaling-number">4</div>
+                    <div class="scaling-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    </div>
+                    <h4 class="scaling-title">Нові ринки</h4>
+                    <p class="scaling-desc">Вийти на нові географічні ринки або сегменти клієнтів з існуючим продуктом</p>
+                    <div class="scaling-tags">
+                        <span class="scaling-tag">Географія</span>
+                        <span class="scaling-tag">Сегменти</span>
+                    </div>
+                </div>
+
+                <div class="scaling-card" data-option="5">
+                    <div class="scaling-number">5</div>
+                    <div class="scaling-icon">
+                        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                    </div>
+                    <h4 class="scaling-title">Розширення бізнес-моделі</h4>
+                    <p class="scaling-desc">Додати нові продукти, послуги або напрямки до існуючого бізнесу</p>
+                    <div class="scaling-tags">
+                        <span class="scaling-tag">Диверсифікація</span>
+                        <span class="scaling-tag">Cross-sell</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Choice Note -->
+            <div class="choice-note">
+                <div class="choice-note-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                </div>
+                <div class="choice-note-text">
+                    <strong>Який шлях обрати?</strong> Це залежить від ваших цілей, ресурсів та ринку. На консультації ми аналізуємо всі варіанти і обираємо оптимальний для вашого бізнесу.
+                </div>
+            </div>
+        </section>
+
         <section class="result-section">
             <h2 class="result-title">Що виходить у фіналі</h2>
             <p class="result-subtitle">На основі 150+ кейсів трансформації бізнесів</p>
@@ -2109,7 +2414,7 @@
             0: { step: "Точка старту", title: "Де ви зараз", type: "simple", description: "Бізнес тримається на вас. Кожен день — гасіння пожеж.", results: ["100% рішень через вас", "Немає чітких процесів", "Результати непередбачувані"], summary: "Бізнес = ваша робота 24/7" },
             1: { step: "Етап 1", title: "Наводимо порядок", type: "simple", description: "13 систем архітектури бізнесу: терміни, розпорядження, структура, статистики.", results: ["Єдине поле мислення команди", "Зрозуміла структура", "Управління через цифри"], summary: "Фундамент для делегування" },
             2: { step: "Етап 2", title: "Передаємо управління", type: "simple", description: "16 кроків системи делегування: підготовка, опис функцій, запуск.", results: ["Функції працюють без вас", "Керівники напрямків", "70% менше операційки"], summary: "Прибуток може вирости до ~80%" },
-            3: { step: "Етап 3", title: "Масштабування", type: "simple", description: "Бізнес як актив: правила + цифри + AI автоматизація.", results: ["80-90% рішень без вас", "Рутина автоматизована", "Готовність до росту"], summary: "Прибуток може вирости до ×3.5" },
+            3: { step: "Етап 3", title: "Масштабування", type: "simple", description: "5 шляхів росту: управлінська компанія, франшиза, ІТ-платформа, нові ринки, розширення бізнес-моделі.", results: ["Обираєте свій шлях росту", "Бізнес готовий до масштабу", "80-90% рішень без вас"], summary: "Прибуток може вирости до ×3.5" },
             4: { step: "Фінал", title: "Бізнес на автопілоті", type: "simple", description: "Система працює. Ви — стратег, не виконавець.", results: ["×3.5 прибуток", "80% менше часу", "90% рішень без вас"], summary: "Бізнес = актив, а не робота" }
         };
 
