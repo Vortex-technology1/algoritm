@@ -605,6 +605,167 @@
             fill: white;
         }
 
+        /* Journal Cross-cutting Section */
+        .journal-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #374151 100%);
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .journal-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(34, 197, 94, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .journal-container {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 32px;
+            align-items: center;
+            position: relative;
+        }
+
+        @media (max-width: 900px) {
+            .journal-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        .journal-icon-wrap {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 32px rgba(34, 197, 94, 0.3);
+        }
+
+        .journal-icon-wrap svg {
+            width: 40px;
+            height: 40px;
+            fill: white;
+        }
+
+        .journal-content {
+            color: white;
+        }
+
+        .journal-badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            color: #4ade80;
+            background: rgba(34, 197, 94, 0.2);
+            padding: 6px 12px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .journal-title {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .journal-desc {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .journal-benefits {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .journal-benefits {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .journal-benefit {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .journal-benefit svg {
+            width: 18px;
+            height: 18px;
+            fill: #4ade80;
+            flex-shrink: 0;
+        }
+
+        .journal-stages {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            padding: 20px;
+        }
+
+        .journal-stage-line {
+            position: absolute;
+            top: 28px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: calc(100% - 80px);
+            background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%);
+            border-radius: 4px;
+        }
+
+        .journal-stage {
+            width: 36px;
+            height: 36px;
+            background: rgba(34, 197, 94, 0.2);
+            border: 2px solid #22c55e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4ade80;
+            font-size: 14px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .journal-stage.active {
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            color: white;
+            box-shadow: 0 4px 16px rgba(34, 197, 94, 0.4);
+        }
+
+        .journal-stage-label {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.6);
+            text-align: center;
+            margin-top: 8px;
+            max-width: 80px;
+            line-height: 1.3;
+        }
+
         /* ========== STAGE TOOLS SECTION ========== */
         .stage-tools-section {
             background: white;
@@ -1605,6 +1766,45 @@
                     <div class="benefit-item"><div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg></div><span>В рази менше часу на операційку</span></div>
                     <div class="benefit-item"><div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div><span>Більшість рішень без вас</span></div>
                     <div class="benefit-item"><div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/></svg></div><span>Прибуток росте передбачувано</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cross-cutting Tool: Journal -->
+        <section class="journal-section">
+            <div class="journal-container">
+                <div class="journal-icon-wrap">
+                    <svg viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg>
+                </div>
+                <div class="journal-content">
+                    <div class="journal-badge">Наскрізний інструмент</div>
+                    <h3 class="journal-title">Щоденник рефлексії</h3>
+                    <p class="journal-desc">Протягом усього навчання записуйте думки, спостереження та висновки. Це ключовий інструмент самоаналізу, який допомагає:</p>
+                    <div class="journal-benefits">
+                        <div class="journal-benefit">
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            <span>Фіксувати інсайти та ключові рішення</span>
+                        </div>
+                        <div class="journal-benefit">
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            <span>Бачити власний прогрес і точки росту</span>
+                        </div>
+                        <div class="journal-benefit">
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            <span>Аналізувати помилки і знаходити закономірності</span>
+                        </div>
+                        <div class="journal-benefit">
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            <span>Формувати управлінське мислення</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="journal-stages">
+                    <div class="journal-stage-line"></div>
+                    <div class="journal-stage active">1</div>
+                    <div class="journal-stage active">2</div>
+                    <div class="journal-stage active">3</div>
+                    <div class="journal-stage-label">Проходить через усі етапи</div>
                 </div>
             </div>
         </section>
